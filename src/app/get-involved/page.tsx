@@ -66,8 +66,8 @@ export default function GetInvolvedPage() {
           >
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Contact Us</h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              We'd love to hear from you. Reach out to us with any questions or
-              inquiries.
+              We&apos;d love to hear from you. Reach out to us with any
+              questions or inquiries.
             </p>
           </motion.div>
 

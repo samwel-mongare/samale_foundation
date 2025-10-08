@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Target, Eye, Users, Handshake } from "lucide-react";
 
 export default function AboutPage() {

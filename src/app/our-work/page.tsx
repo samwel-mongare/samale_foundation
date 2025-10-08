@@ -132,7 +132,7 @@ export default function OurWorkPage() {
                 key={program.slug}
                 title={program.title}
                 description={program.description}
-                status={program.status as any}
+                status={program.status as "current" | "completed" | "upcoming"}
                 pillar={program.pillar}
                 slug={program.slug}
                 image={program.image}
