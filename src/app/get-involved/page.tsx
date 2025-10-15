@@ -59,8 +59,7 @@ export default function GetInvolvedPage() {
         <div className="mx-auto max-w-7xl px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-12 text-center"
           >
@@ -108,9 +107,9 @@ export default function GetInvolvedPage() {
                   <div>
                     <p className="font-semibold">Address</p>
                     <span className="text-muted-foreground">
-                      Muhoho Avenue, South C
+                      Fort Granite, Office Block 2
                       <br />
-                      Nairobi, Kenya
+                      Bishops Road, Nairobi
                     </span>
                   </div>
                 </div>
@@ -118,7 +117,7 @@ export default function GetInvolvedPage() {
 
               {/* Google Map Placeholder */}
               <div className="h-64 w-full rounded-lg bg-muted/50 flex items-center justify-center text-muted-foreground">
-                <p>Google Map Placeholder</p>
+                <p>Google Maps Coming soon</p>
               </div>
             </motion.div>
 

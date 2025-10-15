@@ -89,9 +89,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid gap-12 md:grid-cols-2">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="rounded-lg border bg-card p-8 shadow-sm"
             >
