@@ -121,9 +121,9 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 text-muted-foreground" />
                 <span className="text-muted-foreground">
-                  Northern Kenya
+                  Fort Granite, Office Block 2
                   <br />
-                  Nairobi, Kenya
+                  Bishops Road, Nairobi
                 </span>
               </li>
             </ul>
