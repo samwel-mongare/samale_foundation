@@ -3,84 +3,22 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ProgramCard from "@/components/ui/ProgramCard";
-
-// Mock data - replace with data from Sanity
-const programs = [
-  {
-    title: "Youth Peace Ambassadors",
-    description:
-      "Training young leaders to mediate conflicts and promote peace in their communities.",
-    status: "current",
-    pillar: "Peace & Security",
-    slug: "youth-peace-ambassadors",
-    image:
-      "https://images.unsplash.com/photo-1527525443430-92a76b5b6b26?q=80&w=2070",
-  },
-  {
-    title: "Women in Business",
-    description:
-      "Providing entrepreneurship training and start-up capital for women-led enterprises.",
-    status: "current",
-    pillar: "Economic Development",
-    slug: "women-in-business",
-    image:
-      "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?q=80&w=2070",
-  },
-  {
-    title: "Regenerative Agriculture",
-    description:
-      "Promoting sustainable farming practices to restore soil health and improve food security.",
-    status: "current",
-    pillar: "Climate Change & Sustainability",
-    slug: "regenerative-agriculture",
-    image:
-      "https://images.unsplash.com/photo-1597916819332-29c0a5216394?q=80&w=2070",
-  },
-  {
-    title: "Community Dialogue Forums",
-    description:
-      "Facilitating dialogue between different clans and communities to resolve resource-based conflicts.",
-    status: "completed",
-    pillar: "Peace & Security",
-    slug: "community-dialogue-forums",
-    image:
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070",
-  },
-  {
-    title: "Vocational Skills Training",
-    description:
-      "Equipping youth with marketable skills in trades like masonry, tailoring, and mechanics.",
-    status: "current",
-    pillar: "Economic Development",
-    slug: "vocational-skills-training",
-    image:
-      "https://images.unsplash.com/photo-1554231994-22a6099397a8?q=80&w=2070",
-  },
-  {
-    title: "Clean Energy Solutions",
-    description:
-      "Distributing energy-saving cookstoves and promoting solar energy to reduce deforestation.",
-    status: "upcoming",
-    pillar: "Climate Change & Sustainability",
-    slug: "clean-energy-solutions",
-    image:
-      "https://images.unsplash.com/photo-1509390643499-458ca46a8ab1?q=80&w=2070",
-  },
-];
+import { mockStories } from "../blogs/[slug]/mockData";
 
 export default function OurWorkPage() {
   const [filter, setFilter] = useState("all");
 
-  const filteredPrograms = programs.filter((program) => {
+  const filteredPrograms = mockStories.filter((program) => {
     if (filter === "all") return true;
-    return program.pillar.toLowerCase().includes(filter.toLowerCase());
+    return program.category.toLowerCase().includes(filter.toLowerCase());
   });
 
   const pillars = [
     "All",
-    "Peace & Security",
+    "Peace & Resilience",
     "Economic Development",
-    "Climate Change & Sustainability",
+    "Climate Resilience",
+    "Clean Energy",
   ];
 
   return (
@@ -109,8 +47,7 @@ export default function OurWorkPage() {
           {/* Filter Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-12 flex flex-wrap justify-center gap-2 md:gap-4"
           >
@@ -129,13 +66,13 @@ export default function OurWorkPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredPrograms.map((program, index) => (
               <ProgramCard
-                key={program.slug}
+                key={program.slug.current}
                 title={program.title}
-                description={program.description}
+                description={program.excerpt}
                 status={program.status as "current" | "completed" | "upcoming"}
-                pillar={program.pillar}
-                slug={program.slug}
-                image={program.image}
+                pillar={program.category}
+                slug={program.slug.current}
+                image={program.featuredImage?.asset?.url || ""}
                 index={index}
               />
             ))}
