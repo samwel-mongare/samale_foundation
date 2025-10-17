@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,17 +18,16 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto max-w-7xl flex h-20 items-center justify-between mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl flex h-20 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-            <span className="text-xl font-bold text-primary-foreground">
-              SF
-            </span>
-          </div>
-          <span className="hidden text-xl font-bold text-primary sm:inline-block">
-            Samale Foundation
-          </span>
+          <Image
+            src="/images/logo_transparent.png"
+            alt="Logo"
+            width={600}
+            height={600}
+            className="h-24 w-36 object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
