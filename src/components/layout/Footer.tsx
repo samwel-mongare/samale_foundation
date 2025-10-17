@@ -17,16 +17,13 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* About Section */}
           <div className="space-y-4">
-            <Link
-              href="/"
-              className="flex items-center ml-[-2rem] my-[-1rem] space-x-2"
-            >
+            <Link href="/" className="flex items-center my-[-1rem] space-x-2">
               <Image
                 src="/images/logo_transparent.png"
                 alt="Logo"
                 width={600}
                 height={600}
-                className="h-28 w-48 object-cover"
+                className="h-24 w-32 object-contain"
               />
             </Link>
             <p className="text-sm text-muted-foreground mt-[-1rem]">
