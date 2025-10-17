@@ -8,16 +8,28 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-muted/50">
+    <footer className="border-t bg-muted/50 px-6">
       <div className="mx-auto max-w-7xl py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Samale Foundation</h3>
-            <p className="text-sm text-muted-foreground">
+            <Link
+              href="/"
+              className="flex items-center ml-[-2rem] my-[-1rem] space-x-2"
+            >
+              <Image
+                src="/images/logo_transparent.png"
+                alt="Logo"
+                width={600}
+                height={600}
+                className="h-28 w-48 object-cover"
+              />
+            </Link>
+            <p className="text-sm text-muted-foreground mt-[-1rem]">
               We work to deliver integrated solutions for peace, economic
               empowerment, and climate resilience in Northern Kenya. We seek a
               world of hope, tolerance and social justice.
