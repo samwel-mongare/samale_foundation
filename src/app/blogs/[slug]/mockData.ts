@@ -10,7 +10,7 @@ export const mockStories: Story[] = [
       "Northern Kenya’s vast drylands conceal an escalating struggle for survival. Samale Foundation promotes peace through community empowerment and dialogue.",
     category: "Peace & Resilience",
     author: "Samale Foundation",
-    publishedAt: "2025-01-01",
+    publishedAt: "2022-10-19",
     status: "current",
     readingTime: 5,
     featuredImage: {
@@ -49,7 +49,7 @@ export const mockStories: Story[] = [
       "Peace is not built in conference rooms—it’s forged in village gatherings under acacia trees. Learn how Samale Foundation nurtures trust through dialogue and justice.",
     category: "Peace & Resilience",
     author: "Samale Foundation",
-    publishedAt: "2025-01-02",
+    publishedAt: "2024-04-02",
     status: "upcoming",
     readingTime: 4,
     featuredImage: {
@@ -88,7 +88,7 @@ export const mockStories: Story[] = [
       "Samale Foundation’s vocational model replaces tree-cutting with training in carpentry, solar maintenance, and tailoring—reviving livelihoods and landscapes.",
     category: "Economic Empowerment",
     author: "Samale Foundation",
-    publishedAt: "2025-01-03",
+    publishedAt: "2021-01-03",
     status: "upcoming",
     readingTime: 4,
     featuredImage: {
@@ -117,7 +117,7 @@ export const mockStories: Story[] = [
       "Connecting producers to regional markets transforms resilience into opportunity. Discover how Samale Foundation strengthens value chains across arid lands.",
     category: "Economic Empowerment",
     author: "Samale Foundation",
-    publishedAt: "2025-01-04",
+    publishedAt: "2022-12-04",
     status: "completed",
     readingTime: 4,
     featuredImage: {
@@ -145,7 +145,7 @@ export const mockStories: Story[] = [
       "From water harvesting to reforestation, Samale Foundation’s regenerative agriculture programs restore fertility and hope in the drylands.",
     category: "Climate Resilience",
     author: "Samale Foundation",
-    publishedAt: "2025-01-05",
+    publishedAt: "2024-11-05",
     status: "current",
     readingTime: 4,
     featuredImage: {
@@ -174,7 +174,7 @@ export const mockStories: Story[] = [
       "Energy-saving cookstoves and solar solutions are transforming homes across Northern Kenya—saving forests and improving lives.",
     category: "Clean Energy",
     author: "Samale Foundation",
-    publishedAt: "2025-01-06",
+    publishedAt: "2022-09-06",
     status: "current",
     readingTime: 4,
     featuredImage: {
