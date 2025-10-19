@@ -160,8 +160,8 @@ export default async function StoryPage({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {relatedStories.map((item) => (
-              <Link key={item._id} href={`/stories/${item.slug.current}`}>
-                <Card className="hover:shadow-lg transition rounded-xl overflow-hidden">
+              <Link key={item._id} href={`/blogs/${item.slug.current}`}>
+                <Card className="hover:shadow-lg transition rounded-xl overflow-hidden pt-0">
                   {item.featuredImage?.asset?.url && (
                     <Image
                       src={item.featuredImage.asset.url}
